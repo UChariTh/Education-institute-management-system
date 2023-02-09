@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48174c5d-9d0f-4ccc-b517-b4d2cfec33e5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    *
+FROM
+    st_payment]]>
+	</queryString>
+	<field name="pay_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="st_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="corse_fee" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="course" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pay_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="159" splitType="Stretch">
+			<staticText>
+				<reportElement x="244" y="20" width="398" height="38" uuid="f2bef50c-fcee-408f-a54a-e6b01d27a84a"/>
+				<textElement>
+					<font fontName="SansSerif" size="30" isBold="true" isItalic="false" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Vision Education Institute]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="96" width="251" height="33" uuid="f8436c5f-7e96-46ed-b780-fac980fd4be9"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Students Payments]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="50" width="91" height="20" uuid="785b3e0c-8cb1-40d9-81b1-fe77284e6f28"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoce Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="50" width="82" height="20" uuid="371acb19-ba2d-438b-b958-707e9c9a465d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="50" width="100" height="20" uuid="88a9192f-88cb-474d-bb8e-0455289322f7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="50" width="111" height="20" uuid="8b8a37c9-fb06-4328-ae3f-2e443fefa12f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="50" width="100" height="20" uuid="992513e9-a4fa-4024-8b8d-01fa7ad54b33"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="50" width="100" height="20" uuid="75c286e9-8412-48bd-8be8-e8204a439da4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="584" y="50" width="100" height="20" uuid="e1d4296e-cce8-4930-9cf6-7437782b8491"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="684" y="50" width="118" height="20" uuid="ff96de3f-8fdd-4bbe-afdf-f03ffdd9f40b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payed  Date And Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="91" height="20" uuid="7eb36cb3-b622-443a-b8e7-a548b9855fd4"/>
+				<textFieldExpression><![CDATA[$F{pay_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="10" width="96" height="20" uuid="ce922e81-9fe9-4cd6-9080-fd7c6356f2f7"/>
+				<textFieldExpression><![CDATA[$F{st_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="10" width="82" height="20" uuid="8fc20aba-d152-4aaa-9949-f1c6b4a28ad2"/>
+				<textFieldExpression><![CDATA[$F{corse_fee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="273" y="10" width="111" height="20" uuid="580f3181-8717-42dc-8329-467fea3f5963"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="10" width="100" height="20" uuid="1a145588-d063-4175-a2a6-02246c9f8664"/>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="10" width="100" height="20" uuid="371dbb83-c426-41ea-8006-8c7834882b0a"/>
+				<textFieldExpression><![CDATA[$F{course}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="584" y="10" width="100" height="20" uuid="e03a15be-4fd6-4441-a58e-d39989668728"/>
+				<textFieldExpression><![CDATA[$F{tel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="10" width="118" height="20" uuid="5b59871a-f7bb-48df-80b1-77748ddf7e6b"/>
+				<textFieldExpression><![CDATA[$F{pay_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="621" y="17" width="181" height="37" uuid="dd31d3c0-a2dd-4b9a-9f7f-b7fa7c09c7d0"/>
+				<box>
+					<pen lineStyle="Double"/>
+					<topPen lineStyle="Double"/>
+					<leftPen lineStyle="Double"/>
+					<bottomPen lineStyle="Double"/>
+					<rightPen lineStyle="Double"/>
+				</box>
+				<textElement>
+					<font fontName="Adobe Kaiti Std R" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOFTWARE BY : UC SOLUTIONS]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
